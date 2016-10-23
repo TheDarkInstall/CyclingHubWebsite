@@ -5553,3 +5553,10 @@ function wp_generate_uuid4() {
 		mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff )
 	);
 }
+
+/*Beginning custom sticky nav menu code... Work in progress, so expect errors at first*/
+
+function chtv_custom_menu() {
+  register_nav_menu('custom-menu-test',__( 'CHTV Custom Menu' ));
+}
+add_action( 'init', 'chtv_custom_menu' );
